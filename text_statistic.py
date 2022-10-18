@@ -35,13 +35,15 @@ elucidated.
 '''
 import re
 from collections import Counter
-
+from scraper import Scrape
+scrape = Scrape()
 
 class TextStat():
     def __init__(self, text: str):
         self.text = text
         self.counted_words = {}
         self.word_stat()
+
 
     def word_stat(self):
         '''counting words from self.text'''
